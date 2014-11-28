@@ -1,0 +1,21 @@
+Simple TFTP server, storing to an in-memory filesystem
+
+Implements RFC1350 (nothing from RFC2347, RFC2348, RFC2349)
+
+Developed using go 1.3.3
+
+INSTALL
+
+    go build github.com/rckclmbr/tftp-server
+    ./tftp-server
+
+TESTS
+
+Unit tests:
+
+    go test github.com/rckclmbr/tftp-server
+
+Integration tests:
+
+	./tftp-server
+    bash test.sh
