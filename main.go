@@ -7,7 +7,7 @@ import (
 
 func main() {
 	addr, e := net.ResolveUDPAddr("udp", ":9229")
-    fmt.Printf("Listening on :9229\n")
+	fmt.Printf("Listening on :9229\n")
 	if e != nil {
 		fmt.Printf("Error resolving address: %v\n", e)
 	}
@@ -16,8 +16,8 @@ func main() {
 		if e != nil {
 			fmt.Printf("Error binding to udp address: %v\n", e)
 		}
-        fs := make(map[string][]byte, 0)
-        server := &Server{fs}
+		fs := make(map[string][]byte, 0)
+		server := &Server{fs}
 		for {
 			e = server.ProcessRequest(conn)
 			if e != nil {

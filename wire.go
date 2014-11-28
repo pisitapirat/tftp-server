@@ -16,7 +16,7 @@ const (
 )
 
 const (
-	MAX_BLOCK_SIZE        = 512
+	MAX_BLOCK_SIZE    = 512
 	MAX_DATAGRAM_SIZE = 516 // 512 bytes data + opcode + block#
 )
 
