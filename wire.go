@@ -159,7 +159,7 @@ type ErrorPacket struct {
 }
 
 func (p *ErrorPacket) Unpack(data []byte) error {
-	p.ErrorCode = binary.BigEndian.Uint16(data[2:])
+	p.ErrorCode = binary.LittleEndian.Uint16(data[2:])
 	buffer := bytes.NewBuffer(data[4:])
 	errorMsg, e := buffer.ReadString(0x0)
 	if e != nil {
